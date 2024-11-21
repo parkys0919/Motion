@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속도와 가속도 계산기</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box">
+        <h1>속도와 가속도 계산기</h1>
+
+        <div>
+            <label for="motion-type">운동 종류 선택:</label>
+            <select id="motion-type">
+                <option value="freefall">자유낙하 운동</option>
+                <option value="uniform-acceleration">등가속도 운동</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="time">시간 (s):</label>
+            <input type="number" id="time" placeholder="시간 입력">
+        </div>
+        
+        <div>
+            <label for="distance">현재 시간 (s):</label>
+            <input type="number" id="current time" placeholder="시간 입력">
+        </div>
+        <div id="uniform-acceleration" style="display:none;">
+            <div>
+               <label for="distance">거리 (m):</label>
+                <input type="number" id="distance" placeholder="거리 입력">
+            </div>
+
+            <div>
+                <label for="initial-velocity">초기 속도 (m/s):</label>
+                <input type="number" id="initial-velocity" placeholder="초기 속도 입력">
+            </div>
+        </div>
+
+        <button onclick="calculate()">계산</button>
+
+        <div id="results">
+            <p id="currentdistancetraveled">현재 이동 거리: </p>
+            <p id="distancetraveled">이동 거리: </p>
+            <p id="currentvelocity">순간 속도: </p>
+            <p id="velocity">속도: </p>
+            <p id="acceleration">가속도: </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
